@@ -1,0 +1,48 @@
+
+"""
+    )   (           (                                   
+ ( /(   )\      )   )\   (         )           )   (    
+ )\()) ((_)  ( /(  ((_)  )\ )   ( /(   (    ( /(   )(   
+((_)\   _    )(_))  _   (()/(   )(_))  )\   )(_)) (()\  
+| |(_) | |  ((_)_  | |   )(_)) ((_)_  ((_) ((_)_   ((_) 
+| '_ \ | |  / _` | | |  | || | / _` | (_-< / _` | | '_| 
+|_.__/ |_|  \__,_| |_|   \_, | \__,_| /__/ \__,_| |_|   
+                         |__/                           
+
+"""
+
+
+
+import eyed3
+
+audiofile = eyed3.load("song.mp3")
+audiofile.tag.title = "SARKIBASLIGI"
+audiofile.tag.save()
+
+
+
+import eyed3
+import osmp3tamisim = []os.chdir('/dosyadizininiz')
+for mp3dosyam in os.listdir(os.getcwd()): 
+    if mp3dosyam.endswith('.mp3'):
+        mp3tamisim.append(mp3dosyam)
+        #print(mp3tamisim)
+print(mp3tamisim)
+
+
+
+mp3tamisim2 = []     
+for tiredenböl in mp3tamisim:
+    tiretire = tiredenböl.split("-")
+    mp3tamisim2.append(tiretire[1]) 
+print(mp3tamisim2)
+
+
+
+for i in range(len(mp3tamisim2)):
+    audiofile = eyed3.load(mp3tamisim[i])
+    audiofile.tag.title = mp3tamisim2[i]
+    audiofile.tag.save()
+    
+    
+    
